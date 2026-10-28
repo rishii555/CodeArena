@@ -1,36 +1,158 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CodeArena — Full-Stack Developer Assessment & Online Judge Platform
 
-## Getting Started
+CodeArena is a full-stack online coding and developer assessment platform where users can solve programming problems, submit code, receive automated evaluation results, and track their coding progress.
 
-First, run the development server:
+The project is being built to explore real-world software engineering concepts including REST APIs, authentication, database design, asynchronous job processing, code execution, real-time communication, testing, Docker, and CI/CD.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🎯 Project Goal
+
+The goal of CodeArena is to build a scalable coding platform that goes beyond a basic LeetCode clone.
+
+The platform is designed around three main experiences:
+
+- **Developers/Students:** Practice coding problems and track progress.
+- **Contest Participants:** Participate in timed coding contests.
+- **Companies:** Create coding assessments and evaluate candidates.
+
+## 🚀 Current Features
+
+> This section will be updated as features are implemented.
+
+- [ ] User authentication
+- [ ] User profile
+- [ ] Coding problem browser
+- [ ] Problem filtering
+- [ ] Online code editor
+- [ ] Code submission
+- [ ] Automated code evaluation
+- [ ] Submission history
+- [ ] Coding progress
+- [ ] Coding contests
+- [ ] Company assessments
+
+## 🛠️ Tech Stack
+
+### Frontend
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Monaco Editor
+
+### Backend
+- Node.js
+- Express.js
+- TypeScript
+- REST APIs
+- WebSockets / Socket.IO
+
+### Database
+- PostgreSQL
+- Prisma ORM
+
+### Infrastructure
+- Redis
+- BullMQ
+- Docker
+- Docker Compose
+- GitHub Actions
+
+### Code Execution
+- Judge0
+- Docker-based sandboxing
+
+### Testing
+- Jest
+- Supertest
+- React Testing Library
+- Playwright
+
+## 🏗️ Planned Architecture
+
+```text
+Next.js Frontend
+       │
+       ▼
+Node.js / Express API
+       │
+   ┌───┴────┐
+   ▼        ▼
+PostgreSQL Redis
+            │
+            ▼
+       Redis Queue
+            │
+            ▼
+      Background Worker
+            │
+            ▼
+     Judge0 / Sandbox
+            │
+            ▼
+      Submission Result
+            │
+       ┌────┴────┐
+       ▼         ▼
+  PostgreSQL  WebSocket
+                  │
+                  ▼
+             Next.js UI
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🗄️ Planned Database
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Core entities will include:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `users`
+- `problems`
+- `test_cases`
+- `submissions`
+- `languages`
+- `tags`
+- `contests`
+- `contest_problems`
+- `contest_participants`
+- `assessments`
+- `assessment_candidates`
 
-## Learn More
+## 🔮 Future Features
 
-To learn more about Next.js, take a look at the following resources:
+- AI-powered code hints
+- AI code explanations
+- AI-generated test cases
+- Code plagiarism detection
+- Advanced performance analytics
+- Developer rating system
+- Global leaderboard
+- Company assessment reports
+- Discussion forum
+- Editorial solutions
+- Docker-based isolated execution
+- Horizontal worker scaling
+- Kubernetes deployment
+- Prometheus/Grafana monitoring
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📈 Learning Objectives
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Through this project, I aim to gain practical experience in:
 
-## Deploy on Vercel
+- Full-stack development
+- REST API design
+- Authentication & authorization
+- PostgreSQL database design
+- Redis & job queues
+- Asynchronous processing
+- Real-time systems
+- Code execution architecture
+- System design
+- Docker & containerization
+- Automated testing
+- CI/CD
+- Cloud deployment
+- Security & scalability
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎯 Project Vision
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+CodeArena aims to evolve from a coding practice platform into a complete **developer assessment ecosystem** connecting developers, competitive programmers, and companies through a single platform.
+
+The focus is not only on building features, but also on understanding how modern software systems are **designed, developed, tested, deployed, and scaled**.
